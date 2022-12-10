@@ -1,21 +1,7 @@
-import { TRPCError } from "@trpc/server";
-import type { Database } from "./database";
-import { publicProcedure, middleware } from "./trpc";
+import type { Database } from "../database";
 import type * as TRPC from "@trpc/server/adapters/express";
 
-export default function makeUserProcedure(database: Database) {
-    const getLoggedIn = makeGetLoggedIn(database);
-
-    return publicProcedure.use(
-        middleware(async ({ ctx, next }) => {
-            const loggedIn = await getLoggedIn(ctx);
-            if (loggedIn === undefined) throw new TRPCError({ code: "UNAUTHORIZED" });
-            return next({ ctx: loggedIn });
-        })
-    );
-}
-
-export const makeGetLoggedIn =
+const makeGetLoggedIn =
     (database: Database) =>
     async ({
         req: {
@@ -37,3 +23,7 @@ export const makeGetLoggedIn =
             }
         }
     };
+
+export default makeGetLoggedIn;
+
+export type GetLoggedIn = ReturnType<typeof makeGetLoggedIn>;
