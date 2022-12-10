@@ -12,5 +12,3 @@ const makeUserProcedure = (getLoggedIn: GetLoggedIn) =>
     );
 
 export default makeUserProcedure;
-
-export type UserProcedure = ReturnType<typeof makeUserProcedure>;

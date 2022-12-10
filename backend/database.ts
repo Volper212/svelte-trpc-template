@@ -1,5 +1,5 @@
-import type { inferAsyncReturnType } from "@trpc/server";
 import { MongoClient } from "mongodb";
+import type { AwaitableReturnType } from "./util/AwaitableReturnType";
 
 export default async function getDatabase() {
     const client = await new MongoClient(
@@ -12,7 +12,7 @@ export default async function getDatabase() {
     };
 }
 
-export type Database = inferAsyncReturnType<typeof getDatabase>;
+export type Database = AwaitableReturnType<typeof getDatabase>;
 
 type User = {
     username: string;

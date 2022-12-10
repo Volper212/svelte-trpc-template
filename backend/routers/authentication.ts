@@ -1,16 +1,10 @@
-import type { Database } from "backend/database";
 import { makeRouter, publicProcedure } from "backend/trpc";
 import { z } from "zod";
 import bcrypt from "bcrypt";
 import { v4 as generateId } from "uuid";
-import type { UserProcedure } from "backend/util/userProdecure";
-import type { GetLoggedIn } from "backend/util/getLoggedIn";
+import type Dependencies from "backend/dependencies";
 
-const makeAuthenticationRouter = (
-    database: Database,
-    userProcedure: UserProcedure,
-    getLoggedIn: GetLoggedIn
-) =>
+const makeAuthenticationRouter = ({ database, userProcedure, getLoggedIn }: Dependencies) =>
     makeRouter({
         register: publicProcedure
             .input(
