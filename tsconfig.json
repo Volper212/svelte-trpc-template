@@ -1,0 +1,15 @@
+{
+    "extends": "@tsconfig/svelte/tsconfig.json",
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "strict": true,
+        "target": "ESNext",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "NodeNext",
+        "types": ["svelte"],
+        "baseUrl": "."
+    },
+    "ts-node": {
+        "swc": true
+    }
+}
