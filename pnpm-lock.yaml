@@ -6,22 +6,22 @@ settings:
 
 dependencies:
   '@rollup/plugin-commonjs':
-    specifier: ^23.0.4
-    version: 23.0.7(rollup@3.29.4)
+    specifier: ^25.0.7
+    version: 25.0.7(rollup@3.29.4)
   '@rollup/plugin-node-resolve':
-    specifier: ^15.0.1
+    specifier: ^15.2.3
     version: 15.2.3(rollup@3.29.4)
   '@rollup/plugin-typescript':
-    specifier: ^10.0.1
-    version: 10.0.1(rollup@3.29.4)(tslib@2.6.2)(typescript@4.9.5)
+    specifier: ^11.1.5
+    version: 11.1.5(rollup@3.29.4)(tslib@2.6.2)(typescript@4.9.5)
   '@swc/core':
-    specifier: ^1.3.22
+    specifier: ^1.3.100
     version: 1.3.100(@swc/helpers@0.5.3)
   '@trpc/client':
-    specifier: ^10.4.3
+    specifier: ^10.44.1
     version: 10.44.1(@trpc/server@10.44.1)
   '@trpc/server':
-    specifier: ^10.4.3
+    specifier: ^10.44.1
     version: 10.44.1
   '@tsconfig/svelte':
     specifier: ^3.0.0
@@ -189,11 +189,11 @@ packages:
       sparse-bitfield: 3.0.3
     dev: false
 
-  /@rollup/plugin-commonjs@23.0.7(rollup@3.29.4):
-    resolution: {integrity: sha512-hsSD5Qzyuat/swzrExGG5l7EuIlPhwTsT7KwKbSCQzIcJWjRxiimi/0tyMYY2bByitNb3i1p+6JWEDGa0NvT0Q==}
+  /@rollup/plugin-commonjs@25.0.7(rollup@3.29.4):
+    resolution: {integrity: sha512-nEvcR+LRjEjsaSsc4x3XZfCCvZIaSMenZu/OiwOKGN2UhQpAYI7ru7czFvyWbErlpoGjnSX3D5Ch5FcMA3kRWQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^2.68.0||^3.0.0
+      rollup: ^2.68.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
@@ -203,7 +203,7 @@ packages:
       estree-walker: 2.0.2
       glob: 8.0.3
       is-reference: 1.2.1
-      magic-string: 0.27.0
+      magic-string: 0.30.5
       rollup: 3.29.4
     dev: false
 
@@ -225,11 +225,11 @@ packages:
       rollup: 3.29.4
     dev: false
 
-  /@rollup/plugin-typescript@10.0.1(rollup@3.29.4)(tslib@2.6.2)(typescript@4.9.5):
-    resolution: {integrity: sha512-wBykxRLlX7EzL8BmUqMqk5zpx2onnmRMSw/l9M1sVfkJvdwfxogZQVNUM9gVMJbjRLDR5H6U0OMOrlDGmIV45A==}
+  /@rollup/plugin-typescript@11.1.5(rollup@3.29.4)(tslib@2.6.2)(typescript@4.9.5):
+    resolution: {integrity: sha512-rnMHrGBB0IUEv69Q8/JGRD/n4/n6b3nfpufUu26axhUcboUzv/twfZU8fIBbTOphRAe0v8EyxzeDpKXqGHfyDA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^2.14.0||^3.0.0
+      rollup: ^2.14.0||^3.0.0||^4.0.0
       tslib: '*'
       typescript: '>=3.7.0'
     peerDependenciesMeta:
@@ -1383,7 +1383,7 @@ packages:
   /is-reference@1.2.1:
     resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
     dependencies:
-      '@types/estree': 1.0.0
+      '@types/estree': 1.0.5
     dev: false
 
   /is-reference@3.0.2:
