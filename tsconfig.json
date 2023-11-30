@@ -5,7 +5,6 @@
         "strict": true,
         "target": "ESNext",
         "allowSyntheticDefaultImports": true,
-        "moduleResolution": "NodeNext",
         "types": ["svelte"],
         "baseUrl": "."
     },
