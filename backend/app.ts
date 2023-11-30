@@ -15,6 +15,9 @@ async function main() {
     const app = express();
     app.use(express.static("frontend/public"));
     app.use("/trpc", makeTRPCExpressMiddleware(router));
+    app.use("*", (req, res) => {
+        res.sendFile("frontend/public/index.html", { root: "." });
+    });
     app.listen(process.env.PORT ?? 3000);
 
     return router;
