@@ -4,6 +4,8 @@ Template for creating web apps with Svelte, tRPC and MongoDB.
 
 Authentication included.
 
+Authentication functionality was taken from a friend and refactored to fit to the project's structure (tRPC etc.) and coding style.
+
 ## Setup
 
 ```
